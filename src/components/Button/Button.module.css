@@ -1,0 +1,25 @@
+.button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--background-color);
+    border: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+    transform: rotateZ(-10deg);
+}
+
+.button:focus {
+    border: 0;
+    outline: 0;
+    transform: translateY(-10%) scale(1.2) rotateZ(0);
+}
+
+.button:hover {
+    transform: translateY(-10%) scale(1.2) rotateZ(0);
+}
