@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 2px;
+}
+
+.text {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: font-weight .2s ease-in-out
+}
+
+.link:hover {
+  font-weight: bold;
+}
