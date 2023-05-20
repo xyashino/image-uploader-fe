@@ -3,6 +3,7 @@
     max-height: 90%;
     border-radius: 20px;
     padding: 20px 30px;
+    overflow-y:scroll;
     margin: 20px;
     display: flex;
     flex-direction: column;
