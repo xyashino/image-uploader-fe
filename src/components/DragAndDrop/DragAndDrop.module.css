@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    min-height: 200px;
+    margin: 0 30px;
+    border-radius: 40px;
+    border: 2px rgb(var(--primary)) dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    background-color: rgba(var(--primary),0.1);
+    padding: 30px 10px;
+    transition: background-color .2s ease-in-out;
+}
+
+.container__drag {
+    background-color: rgba(var(--primary),0.2);
+    cursor: grab;
+}
+
+
+.container__text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgba(var(--text), 1.3);
+    filter: brightness(200%);
+}
