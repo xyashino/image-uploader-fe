@@ -1,5 +1,6 @@
 .motion__card {
     width: 90%;
+    max-height: 90%;
     border-radius: 20px;
     padding: 20px 30px;
     margin: 20px;
