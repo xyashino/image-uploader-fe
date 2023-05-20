@@ -1,0 +1,52 @@
+.error__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  height: 30px;
+  color: firebrick;
+  margin-right: 10px;
+  transition: 0.3s ease-in-out;
+}
+.icon:hover {
+  rotate: 90deg;
+}
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(var(--text));
+}
+
+.description {
+  font-size: 1.2rem;
+  color: rgb(var(--text));
+  text-align: center;
+  margin: 20px 0;
+}
+
+.code {
+  text-align: left;
+  font-weight: bold;
+  width: 80%;
+  margin: 40px 10px;
+  background-color: rgba(var(--primary), 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+.code pre {
+  white-space: pre-wrap;
+}
+.code span {
+  font-size: 1.5rem;
+  color: firebrick;
+}
