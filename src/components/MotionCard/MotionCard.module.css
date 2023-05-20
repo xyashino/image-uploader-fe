@@ -1,0 +1,29 @@
+.motion__card {
+    width: 90%;
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px 1px rgba(var(--text),0.3);
+    align-self: center;
+}
+
+
+@media screen and (min-width: 768px) {
+    .motion__card {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .motion__card {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .motion__card {
+        width: 40%;
+    }
+}
