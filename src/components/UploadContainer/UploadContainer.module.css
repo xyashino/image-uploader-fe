@@ -1,0 +1,28 @@
+.upload__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload__container__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(var(--text));
+  margin-bottom: 20px;
+}
+
+.upload__container__text {
+  color: rgb(var(--text));
+  font-weight: bold;
+  color: rgba(var(--text), 0.9);
+}
+
+.upload__container__description {
+  color: rgba(var(--text), 0.9);
+  font-weight: 700;
+}
+.hide {
+  display: none;
+}
