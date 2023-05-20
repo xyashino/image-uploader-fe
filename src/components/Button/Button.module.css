@@ -1,12 +1,12 @@
 .button {
     padding: 10px 20px;
     border-radius: 20px;
-    background-color: var(--primary);
+    background-color: rgb(var(--primary));
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    color: var(--background-color);
+    color: rgb(var(--background-color));
     border: 0;
     font-size: 1.2rem;
     cursor: pointer;
