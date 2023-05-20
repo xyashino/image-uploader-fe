@@ -1,7 +1,7 @@
 import classes from './UploadContainer.module.css';
-import { Button } from '../Button/Button.tsx';
+import { Button } from '@components/Button/Button.tsx';
 import { ChangeEvent, SyntheticEvent, useRef } from 'react';
-import { DragAndDrop } from '../DragAndDrop/DragAndDrop.tsx';
+import { DragAndDrop } from '@components/DragAndDrop/DragAndDrop.tsx';
 
 interface Props {
   addImage: (e: File) => void;

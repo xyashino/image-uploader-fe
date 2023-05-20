@@ -1,7 +1,7 @@
 import classes from './ErrorResult.module.css';
 
-import { Button } from '../Button/Button.tsx';
-import { Error } from '../icons/Error.tsx';
+import { Button } from '@components/Button/Button.tsx';
+import { Error } from '@icons/Error.tsx';
 
 interface Props {
   message: string;

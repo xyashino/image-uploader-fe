@@ -1,5 +1,5 @@
 import classes from './SuccessResult.module.css';
-import { Success } from '../icons/Success.tsx';
+import { Success } from '@icons/Success.tsx';
 import { SyntheticEvent } from 'react';
 
 interface Props {

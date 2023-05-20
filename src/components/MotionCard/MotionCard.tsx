@@ -2,7 +2,6 @@ import { PropsWithChildren } from 'react';
 import { motion } from 'framer-motion';
 import classes from './MotionCard.module.css';
 import { AppStatus } from '../../types/app-status.ts';
-
 interface Props extends PropsWithChildren {
   appState: AppStatus;
 }

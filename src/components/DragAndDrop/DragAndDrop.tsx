@@ -1,5 +1,5 @@
 import classes from './DragAndDrop.module.css';
-import image from '../../assets/image.svg';
+import image from '@assets/image.svg';
 import { useState, DragEvent } from 'react';
 
 interface Props {

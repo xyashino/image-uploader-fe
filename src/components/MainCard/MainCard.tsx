@@ -1,10 +1,10 @@
 import { useLayoutEffect, useState } from 'react';
-import { UploadContainer } from '../UploadContainer/UploadContainer.tsx';
-import { Loading } from '../Loading/Loading.tsx';
-import { SuccessResult } from '../SuccessResult/SuccessResult.tsx';
+import { UploadContainer } from '@components/UploadContainer/UploadContainer.tsx';
+import { Loading } from '@components/Loading/Loading.tsx';
+import { SuccessResult } from '@components/SuccessResult/SuccessResult.tsx';
 import { setAndFilterFile, uploadImage } from './MainCard.helper.ts';
-import { ErrorResult } from '../ErrorResult/ErrorResult.tsx';
-import { MotionCard } from '../MotionCard/MotionCard.tsx';
+import { ErrorResult } from '@components/ErrorResult/ErrorResult.tsx';
+import { MotionCard } from '@components/MotionCard/MotionCard.tsx';
 import { AppStatus } from '../../types/app-status.ts';
 
 export const MainCard = () => {
