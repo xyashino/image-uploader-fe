@@ -20,7 +20,7 @@ export const MotionCard = ({ appState, children }: Props) => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0 }}
       transition={transition}
-      className={classes.main__card}
+      className={classes.motion__card}
     >
       {children}
     </motion.div>
