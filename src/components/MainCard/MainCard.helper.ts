@@ -9,7 +9,7 @@ export const setAndFilterFile = (e: File, setImage: Dispatch<SetStateAction<File
   setImage(e);
 };
 
-export const  = async (
+export const uploadImage = async (
   image: File,
   setError: Dispatch<SetStateAction<string | null>>,
   setAppStatus: Dispatch<SetStateAction<AppStatus>>,
