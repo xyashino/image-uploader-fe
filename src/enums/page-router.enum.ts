@@ -1,4 +1,4 @@
-export enum Router {
+export enum PageRouter {
   Home = '/',
   Everything = '*',
 }
