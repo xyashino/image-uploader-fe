@@ -1,13 +1,19 @@
-import { Wrapper } from '@components/Wrapper/Wrapper.tsx';
-import { Footer } from '@components/Footer/Footer.tsx';
-import { MainCard } from '@components/MainCard/MainCard.tsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { MainLayout } from '@layouts/MainLayout.tsx';
+import { Loading } from '@components/Loading/Loading.tsx';
+import { PageRouter } from '@enums/page-router.enum.ts';
+import { ErrorElement } from '@components/ErrorElement/ErrorElement.tsx';
 
-export const App = () => {
-  return (
-    <Wrapper>
-      <div />
-      <MainCard />
-      <Footer />
-    </Wrapper>
-  );
-};
+const routers = createBrowserRouter([
+  {
+    element: <MainLayout />,
+    errorElement: <ErrorElement />,
+    children: [
+      {
+        path: PageRouter.Home,
+        element: <div>Main</div>,
+      },
+    ],
+  },
+]);
+export const App = () => <RouterProvider router={routers} fallbackElement={<Loading />} />;
