@@ -1,1 +1,1 @@
-export type AppStatus = 'init' | 'loading' | 'success' | 'error';
+export type AppStatus = 'upload' | 'loading' | 'success' | 'error';
