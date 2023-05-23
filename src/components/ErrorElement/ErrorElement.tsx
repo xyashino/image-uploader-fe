@@ -28,7 +28,7 @@ export const ErrorElement = ({
   };
 
   return (
-    <div className={`${withoutCardStyle ? classes.errorContainer : classes.errorContainerCard}`} draggable={false}>
+    <div className={`${withoutCardStyle ? classes.error__container : classes.error__container_card}`} draggable={false}>
       <div className={classes.header}>
         <ErrorIcon className={classes.icon} />
         <h2 className={classes.title}>{errorHeading}</h2>
