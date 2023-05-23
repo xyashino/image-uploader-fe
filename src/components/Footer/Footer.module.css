@@ -1,20 +1,20 @@
 .footer {
-  width: 100%;
+  width: 90%;
   text-align: center;
-  padding: 2px;
-    align-self: flex-end;
+  align-self: flex-end;
+  margin: 0 auto;
 }
-
 .text {
-    color: rgb(var(--text));
-    font-size: 1rem;
-    font-weight: 500;
+  color: rgb(var(--text));
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .link {
-  color:rgb(var(--primary));
+  color: rgb(var(--primary));
   text-decoration: none;
-  transition: font-weight .2s ease-in-out
+  transition: font-weight 0.2s ease-in-out;
 }
 
 .link:hover {
