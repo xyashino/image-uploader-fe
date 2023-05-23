@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { MainLayout } from '@layouts/MainLayout/MainLayout.tsx';
-import { Loading } from '@components/Loading/Loading.tsx';
 import { PageRouter } from '@enums/page-router.enum.ts';
 import { ErrorElement } from '@components/ErrorElement/ErrorElement.tsx';
 import { NotFoundPage } from '@pages/NotFound/NotFoundPage.tsx';
@@ -36,4 +35,4 @@ const routers = createBrowserRouter([
     errorElement: <ErrorElement />,
   },
 ]);
-export const App = () => <RouterProvider router={routers} fallbackElement={<Loading />} />;
+export const App = () => <RouterProvider router={routers} />;
