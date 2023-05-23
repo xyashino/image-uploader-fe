@@ -1,12 +1,13 @@
-import { PropsWithChildren } from 'react';
 import { motion } from 'framer-motion';
-import classes from './MotionCard.module.css';
+import classes from './AnimatedCard.module.css';
+import { PropsWithChildren } from 'react';
 import { AppStatus } from '../../types/app-status.ts';
+
 interface Props extends PropsWithChildren {
   appState: AppStatus;
 }
 
-export const MotionCard = ({ appState, children }: Props) => {
+export const AnimatedCard = ({ children, appState }: Props) => {
   const transition = {
     duration: 0.2,
     ease: 'easeInOut',
