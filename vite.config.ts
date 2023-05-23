@@ -13,6 +13,7 @@ export default defineConfig({
       '@layouts': resolve(__dirname, './src/layouts'),
       '@enums': resolve(__dirname, './src/enums'),
       '@pages': resolve(__dirname, './src/pages'),
+      '@utils': resolve(__dirname, './src/utils'),
     },
   },
   plugins: [react()],
