@@ -1,35 +1,28 @@
-import { HTMLAttributes, PropsWithChildren, useEffect, useState } from 'react';
+import { HTMLAttributes, PropsWithChildren } from 'react';
 
 interface Props extends PropsWithChildren, Omit<HTMLAttributes<HTMLButtonElement>, 'onClick'> {
   fileUrl: string;
-  fileName: string;
 }
 
-const DownloadButton = ({ fileUrl, fileName, children, ...rest }: Props) => {
-  const [dataUrl, setDataUrl] = useState<string | null>(null);
-
-  useEffect(() => {
+const DownloadButton = ({ fileUrl, children, ...rest }: Props) => {
+  const handleDownload = () => {
     fetch(fileUrl, {
       mode: 'no-cors',
     })
       .then((response) => response.blob())
       .then((blob) => {
-        const url = window.URL.createObjectURL(blob);
-        setDataUrl(url);
+        const blobUrl = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.download = fileUrl.replace(/^.*[\\\/]/, '');
+        a.href = blobUrl;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
       });
-  }, [fileUrl]);
-
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    if (typeof dataUrl === 'string') link.href = dataUrl;
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
-    <button onClick={handleDownload} disabled={!dataUrl} {...rest}>
+    <button onClick={handleDownload} {...rest}>
       {children}
     </button>
   );

@@ -26,7 +26,7 @@ export const PicturePage = () => {
         <img src={imageUrl} alt="Saved Image" className={classes.picture_page__image} />
       </div>
       <div className={classes.picture_page__buttons}>
-        <DownloadButton fileName={data.originalName} fileUrl={imageUrl} className={classes.button}>
+        <DownloadButton fileUrl={imageUrl} className={classes.button}>
           Download
         </DownloadButton>
         <button className={classes.button} onClick={handleButtonClick}>
