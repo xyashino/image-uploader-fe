@@ -21,9 +21,7 @@ export const PicturePage = () => {
 
   return (
     <div className={classes.picture_page}>
-      <div className={classes.picture_page__wrapper}>
-        <img src={imageUrl} alt="Saved Image" className={classes.picture_page__image} />
-      </div>
+      <img src={imageUrl} alt="Saved Image" className={classes.picture_page__image} />
       <div className={classes.picture_page__buttons}>
         <a href={imageUrl} download className={classes.button} target="_blank" rel="noreferrer">
           Download

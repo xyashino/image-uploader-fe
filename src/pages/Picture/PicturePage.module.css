@@ -7,17 +7,11 @@
   width: 90%;
   margin: 5px auto;
 }
-.picture_page__wrapper {
-  padding: 5px;
-  max-width: 100%;
-  max-height: 100%;
-  display: grid;
-  place-items: center;
-}
 
 .picture_page__image {
-  max-width: 100%;
-  max-height: 80%;
+  margin: 0 auto;
+  max-width: 90%;
+  max-height: 70%;
   object-fit: contain;
   border: 1px solid rgba(var(--primary), 0.5);
   padding: 8px;
