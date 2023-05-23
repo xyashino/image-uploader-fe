@@ -3,6 +3,7 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 import { SyntheticEvent } from 'react';
 import { PageRouter } from '@enums/page-router.enum.ts';
 import { ImageResponse } from '../../types/image-response.ts';
+import DownloadButton from '@components/DownloadButton/DownloadButton.tsx';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -25,9 +26,9 @@ export const PicturePage = () => {
         <img src={imageUrl} alt="Saved Image" className={classes.picture_page__image} />
       </div>
       <div className={classes.picture_page__buttons}>
-        <a href={imageUrl} download={`${data.originalName}`} className={classes.button}>
+        <DownloadButton fileName={data.originalName} fileUrl={imageUrl} className={classes.button}>
           Download
-        </a>
+        </DownloadButton>
         <button className={classes.button} onClick={handleButtonClick}>
           Delete
         </button>
