@@ -9,7 +9,9 @@ const DownloadButton = ({ fileUrl, fileName, children, ...rest }: Props) => {
   const [dataUrl, setDataUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(fileUrl)
+    fetch(fileUrl, {
+      mode: 'no-cors',
+    })
       .then((response) => response.blob())
       .then((blob) => {
         const url = window.URL.createObjectURL(blob);
