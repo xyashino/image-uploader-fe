@@ -10,7 +10,7 @@ import { ImageUploadResponse } from '../../types/upload-image-response.ts';
 
 export const HomePage = () => {
   const [image, setImage] = useState<File | null>(null);
-  const [status, setStatus] = useState<AppStatus>('loading');
+  const [status, setStatus] = useState<AppStatus>('upload');
   const [error, setError] = useState<string | undefined>();
   const [urls, setUrls] = useState<ImageUploadResponse>({ frontendImageUrl: '', backendImageUrl: '' });
 
