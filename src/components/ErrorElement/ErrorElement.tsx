@@ -1,4 +1,4 @@
-import styles from './ErrorComponent.module.css';
+import classes from './ErrorElement.module.css';
 import { ErrorIcon } from '@icons/ErrorIcon.tsx';
 import { useNavigate, useRouteError } from 'react-router-dom';
 import { SyntheticEvent } from 'react';
@@ -28,15 +28,15 @@ export const ErrorElement = ({
   };
 
   return (
-    <div className={`${withoutCardStyle ? styles.errorContainer : styles.errorContainerCard}`} draggable={false}>
-      <div className={styles.header}>
-        <ErrorIcon className={styles.icon} />
-        <h2 className={styles.title}>{errorHeading}</h2>
+    <div className={`${withoutCardStyle ? classes.errorContainer : classes.errorContainerCard}`} draggable={false}>
+      <div className={classes.header}>
+        <ErrorIcon className={classes.icon} />
+        <h2 className={classes.title}>{errorHeading}</h2>
       </div>
 
-      <p className={styles.description}>Something went wrong, please try again</p>
+      <p className={classes.description}>Something went wrong, please try again</p>
 
-      <code className={styles.code}>
+      <code className={classes.code}>
         <span>Error:</span>
         <pre>{detailedErrorMessage ?? error?.message ?? 'Unknown'}</pre>
       </code>
