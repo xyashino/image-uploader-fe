@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-export const Error = (props: SVGProps<SVGSVGElement>) => (
+export const ErrorIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
     <mask id="ipSError0">
       <path

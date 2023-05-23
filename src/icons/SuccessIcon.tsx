@@ -1,5 +1,5 @@
 import { SVGProps } from 'react';
-export const Success = (props: SVGProps<SVGSVGElement>) => (
+export const SuccessIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" {...props}>
     <path
       fill="currentColor"
