@@ -4,25 +4,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 
 .upload__container__title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: rgb(var(--text));
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .upload__container__text {
   color: rgb(var(--text));
   font-weight: bold;
   color: rgba(var(--text), 0.9);
+  font-size: 1rem;
 }
 
 .upload__container__description {
   color: rgba(var(--text), 0.9);
   font-weight: 700;
+  font-size: 1rem;
 }
 .hide {
   display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+  .upload__container__text {
+    font-size: 1.2rem;
+  }
+  .upload__container__title {
+    font-size: 2.5rem;
+  }
+  .upload__container__description {
+    font-size: 1.5rem;
+  }
 }

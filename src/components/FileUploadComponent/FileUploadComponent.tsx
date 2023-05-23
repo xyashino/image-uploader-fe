@@ -1,4 +1,4 @@
-import classes from './UploadContainer.module.css';
+import classes from './FileUploadComponent.module.css';
 import { Button } from '@components/Button/Button.tsx';
 import { ChangeEvent, SyntheticEvent, useRef } from 'react';
 import { DragAndDrop } from '@components/DragAndDrop/DragAndDrop.tsx';
@@ -6,7 +6,7 @@ import { DragAndDrop } from '@components/DragAndDrop/DragAndDrop.tsx';
 interface Props {
   addImage: (e: File) => void;
 }
-export const UploadContainer = ({ addImage }: Props) => {
+export const FileUploadComponent = ({ addImage }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const chooseFile = (e: SyntheticEvent) => {
     e.preventDefault();
