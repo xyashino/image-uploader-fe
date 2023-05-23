@@ -1,37 +1,47 @@
-import classes from './ErrorElement.module.css';
-
-import { Button } from '@components/Button/Button.tsx';
-import { Error } from '@icons/Error.tsx';
+import styles from './ErrorComponent.module.css';
+import { ErrorIcon } from '@icons/ErrorIcon.tsx';
 import { useNavigate, useRouteError } from 'react-router-dom';
 import { SyntheticEvent } from 'react';
+import { Button } from '@components/Button/Button.tsx';
 import { PageRouter } from '@enums/page-router.enum.ts';
 
 interface Props {
-  errorMessage?: string;
+  detailedErrorMessage?: string;
+  errorHeading?: string;
+  navigateToMain?: () => void;
+  withoutCardStyle?: boolean;
 }
 
-export const ErrorElement = ({ errorMessage = 'Error' }: Props) => {
-  const { message } = useRouteError() as Error;
+export const ErrorElement = ({
+  errorHeading = 'Error',
+  detailedErrorMessage,
+  navigateToMain,
+  withoutCardStyle = false,
+}: Props) => {
+  const error = useRouteError() as Error;
   const navigate = useNavigate();
 
-  const handleGoToMain = (e: SyntheticEvent) => {
+  const handleNavigateToMain = (e: SyntheticEvent) => {
     e.preventDefault();
+    if (navigateToMain) return navigateToMain();
     navigate(PageRouter.Home);
   };
 
   return (
-    <div className={classes.error__container} draggable={false}>
-      <div className={classes.header}>
-        <Error className={classes.icon} />
-        <h2 className={classes.title}>{errorMessage}</h2>
+    <div className={`${withoutCardStyle ? styles.errorContainer : styles.errorContainerCard}`} draggable={false}>
+      <div className={styles.header}>
+        <ErrorIcon className={styles.icon} />
+        <h2 className={styles.title}>{errorHeading}</h2>
       </div>
-      <p className={classes.description}>Something went wrong, please try again</p>
 
-      <code className={classes.code}>
+      <p className={styles.description}>Something went wrong, please try again</p>
+
+      <code className={styles.code}>
         <span>Error:</span>
-        <pre>{message ?? 'Unkown'}</pre>
+        <pre>{detailedErrorMessage ?? error?.message ?? 'Unknown'}</pre>
       </code>
-      <Button onClick={handleGoToMain}>Go To Main</Button>
+
+      <Button onClick={handleNavigateToMain}>Go To Main</Button>
     </div>
   );
 };

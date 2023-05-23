@@ -1,12 +1,21 @@
+.error__container_card {
+  width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  padding: 30px 10px;
+  margin: 20px auto;
+  box-shadow: 0 0 20px 1px rgba(var(--text),0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .error__container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
 }
-
 .header {
   display: flex;
   justify-content: center;
@@ -49,4 +58,21 @@
 .code span {
   font-size: 1.5rem;
   color: firebrick;
+}
+
+@media screen and (min-width: 768px) {
+  .error__container_card {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .error__container_card {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .error__container_card {
+    width: 40%;
+  }
 }
