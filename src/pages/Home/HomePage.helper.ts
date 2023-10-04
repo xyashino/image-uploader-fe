@@ -24,6 +24,7 @@ export const sendImageToServer = async (
 
   const res = await fetch(`${API_URL}/upload/image`, {
     method: 'POST',
+    mode: 'no-cors',
     body: formData,
   });
 
